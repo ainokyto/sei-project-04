@@ -1,8 +1,8 @@
 # pylint: disable=no-member, no-self-use
-
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 
+from wines.serializers import WineSerializer
 from .models import Winemaker
 User = get_user_model()
 
@@ -17,3 +17,6 @@ class WinemakerSerializer(serializers.ModelSerializer): # WRITE serializer, used
     class Meta:
         model = Winemaker
         fields = '__all__'
+
+class PopulatedWinemakerSerializer(WinemakerSerializer):
+    wines = WineSerializer(many=True)
