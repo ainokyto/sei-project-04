@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'winemakers',
     'wines',
+    'styles',
     'jwt_auth',
 ]
 

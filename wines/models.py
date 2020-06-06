@@ -10,6 +10,10 @@ class Wine(models.Model):
         related_name='wines',
         on_delete=models.CASCADE
     )
+    style = models.ManyToManyField(
+        'styles.Style',
+        related_name='style'
+    )
 
     def __str__(self):
         return f'{self.name}'
