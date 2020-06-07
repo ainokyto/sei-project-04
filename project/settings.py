@@ -38,10 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'winemakers',
-    'wines',
-    'styles',
     'jwt_auth',
+    'reviews',
+    'winemakers',
+    'styles',
+    'wines',
 ]
 
 MIDDLEWARE = [

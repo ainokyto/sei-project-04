@@ -6,4 +6,5 @@ urlpatterns = [
     path('api/auth/', include('jwt_auth.urls')),
     path('api/winemakers/', include('winemakers.urls')),
     path('api/wines/', include('wines.urls')),
+    path('api/reviews/', include('reviews.urls')),
 ]

@@ -1,0 +1,83 @@
+[
+  {
+    "model": "jwt_auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$180000$1oSrDOGpd6bF$gJblwko0/WOCIQQq64BRl77U3qCgOfUiWVzGitcxBoI=",
+      "last_login": "2020-05-31T18:44:50.217Z",
+      "is_superuser": true,
+      "username": "admin",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-05-31T18:28:44.453Z",
+      "email": "admin@email.com",
+      "profile_image": "",
+      "bio": "",
+      "first_name": "",
+      "last_name": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "jwt_auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$180000$UIXGHTQdlf47$e0Z3tbNWM2Z6ccegJk00Hov78RvJlb4ot276rgXhJEg=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "Jack",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-05-31T18:15:38.858Z",
+      "email": "jack@email.com",
+      "profile_image": "https://ga-core.s3.amazonaws.com/production/uploads/instructor/image/14618/thumb_Screen_Shot_2019-05-30_at_16.42.14.png",
+      "bio": "Software Engineer in LDN",
+      "first_name": "Jack",
+      "last_name": "May",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "jwt_auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$180000$ztBVauyaXw0v$fElNaxilFlWDHvXi8eVX/UwirBoXqgM+UKukENdl9r8=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "Charlotte",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-05-31T18:30:13.613Z",
+      "email": "charlotte@email.com",
+      "profile_image": "https://ca.slack-edge.com/T0351JZQ0-UDC194EAH-3d2a5f44ffa8-512",
+      "bio": "Software Engineer in LDN",
+      "first_name": "Charlotte",
+      "last_name": "Morgan",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "jwt_auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$180000$79TMPCdaodTP$3N0bA08w6v72MQl44A6juXI9QTjp+drwFg+gq25/uk0=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "Abi",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-05-31T18:30:24.636Z",
+      "email": "abi@email.com",
+      "profile_image": "https://ca.slack-edge.com/T0351JZQ0-UPF4VBW6A-aa58c07cbaf1-512",
+      "bio": "Software Engineer in LDN",
+      "first_name": "Abi",
+      "last_name": "Foreman",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+  ]
+  

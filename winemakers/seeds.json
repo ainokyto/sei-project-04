@@ -1,0 +1,13 @@
+[
+{
+  "model": "winemakers.winemaker",
+  "pk": 1,
+  "fields": {
+    "name": "Fattoria San Lorenzo",
+    "region": "Marche",
+    "country": "Italy",
+    "owner": "Natalino Crognaletti",
+    "avg_yields_per_year_btl": 100000
+  }
+}
+]

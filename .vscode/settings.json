@@ -1,0 +1,24 @@
+{
+  "python.pythonPath": "/usr/local/opt/python/bin/python3.7",
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#90d9f5",
+    "titleBar.activeBackground": "#90d9f5",
+    "titleBar.inactiveBackground": "#90d9f599",
+    "activityBar.activeBackground": "#bfe9f9",
+    "activityBar.activeBorder": "#f16dcd",
+    "activityBar.background": "#bfe9f9",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#f16dcd",
+    "activityBarBadge.foreground": "#15202b",
+    "statusBar.border": "#90d9f5",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#61c9f1",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.border": "#90d9f5",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "window.title": "WINO Back-End",
+  "peacock.color": "#90d9f5"
+}

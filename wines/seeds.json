@@ -1,0 +1,19 @@
+[
+{
+  "model": "wines.wine",
+  "pk": 1,
+  "fields": {
+    "name": "Le Oche",
+    "colour": "White",
+    "grape_varieties": "100% Verdicchio",
+    "description": "Yellow-gold colour, aromas of warm apricots, toasted hazelnuts and creamed ginger, builds in the mouth, and given definition by excellent citrus acidity.",
+    "producer": 1,
+    "style": [
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+}
+]
