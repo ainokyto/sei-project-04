@@ -1,13 +1,134 @@
 [
-{
-  "model": "winemakers.winemaker",
-  "pk": 1,
-  "fields": {
-    "name": "Fattoria San Lorenzo",
-    "region": "Marche",
-    "country": "Italy",
-    "owner": "Natalino Crognaletti",
-    "avg_yields_per_year_btl": 100000
+  {
+    "model": "winemakers.winemaker",
+    "pk": 1,
+    "fields": {
+      "name": "Podere Pradarolo",
+      "region": "Emilia Romagna",
+      "country": "Italy",
+      "owner": "Alberto & Claudia Carretti",
+      "avg_yields_per_year_btl": 0
+    }
+  },
+  {
+    "model": "winemakers.winemaker",
+    "pk": 3,
+    "fields": {
+      "name": "Vega Aixal\u00e0",
+      "region": "Conca de Barber\u00e0",
+      "country": "Spain",
+      "owner": "Jose Antonio & Eva Vega",
+      "avg_yields_per_year_btl": 30000
+    }
+  },
+  {
+    "model": "winemakers.winemaker",
+    "pk": 4,
+    "fields": {
+      "name": "Noita Winery",
+      "region": "Burgenland / Fiskars",
+      "country": "Finland",
+      "owner": "Simon McCabe, Jari Leinonen",
+      "avg_yields_per_year_btl": 3000
+    }
+  },
+  {
+    "model": "winemakers.winemaker",
+    "pk": 5,
+    "fields": {
+      "name": "Radikon",
+      "region": "Friuli Venezia Giulia",
+      "country": "Italy",
+      "owner": "Sa\u0161a, Suzana & Stanko Radikon",
+      "avg_yields_per_year_btl": 55000
+    }
+  },
+  {
+    "model": "winemakers.winemaker",
+    "pk": 6,
+    "fields": {
+      "name": "Schmeltzer's Weingut",
+      "region": "Burgenland",
+      "country": "Austria",
+      "owner": "Georg Schmeltzer",
+      "avg_yields_per_year_btl": 35000
+    }
+  },
+  {
+    "model": "winemakers.winemaker",
+    "pk": 7,
+    "fields": {
+      "name": "2Naturkinder",
+      "region": "Franken",
+      "country": "Germany",
+      "owner": "Melanie Drese & Michael V\u00f6lker",
+      "avg_yields_per_year_btl": 40000
+    }
+  },
+  {
+    "model": "winemakers.winemaker",
+    "pk": 8,
+    "fields": {
+      "name": "Domaine Matassa",
+      "region": "Roussillon",
+      "country": "France",
+      "owner": "Tom Lubbe",
+      "avg_yields_per_year_btl": 0
+    }
+  },
+  {
+    "model": "winemakers.winemaker",
+    "pk": 9,
+    "fields": {
+      "name": "Vandal Wine",
+      "region": "Roussillon",
+      "country": "France",
+      "owner": "Rapha\u00ebl Baissas de Chastenet",
+      "avg_yields_per_year_btl": 0
+    }
+  },
+  {
+    "model": "winemakers.winemaker",
+    "pk": 10,
+    "fields": {
+      "name": "Julien Peyras",
+      "region": "Languedoc",
+      "country": "France",
+      "owner": "Julien Peyras",
+      "avg_yields_per_year_btl": 0
+    }
+  },
+  {
+    "model": "winemakers.winemaker",
+    "pk": 11,
+    "fields": {
+      "name": "Weingut Koppitsch",
+      "region": "Burgenland",
+      "country": "Austria",
+      "owner": "Maria & Alex Koppitsch",
+      "avg_yields_per_year_btl": 0
+    }
+  },
+  {
+    "model": "winemakers.winemaker",
+    "pk": 12,
+    "fields": {
+      "name": "Domaine S\u00e9bastien Riffault",
+      "region": "Sancerre",
+      "country": "France",
+      "owner": "S\u00e9bastien Riffault",
+      "avg_yields_per_year_btl": 40000
+    }
+  },
+  {
+    "model": "winemakers.winemaker",
+    "pk": 13,
+    "fields": {
+      "name": "Fattoria San Lorenzo",
+      "region": "Marche",
+      "country": "Italy",
+      "owner": "Natalino Crognaletti",
+      "avg_yields_per_year_btl": 100000
+    }
   }
-}
 ]

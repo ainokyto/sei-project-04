@@ -5,15 +5,9 @@ class Wine(models.Model):
     colour = models.CharField(max_length=20)
     grape_varieties = models.CharField(max_length=100, blank=True)
     description = models.CharField(max_length=300, blank=True)
-    producer = models.ForeignKey(
-        'winemakers.Winemaker',
-        related_name='wines',
-        on_delete=models.CASCADE
-    )
-    style = models.ManyToManyField(
-        'styles.Style',
-        related_name='style'
-    )
+    producer = models.ForeignKey('winemakers.Winemaker', related_name='wines', on_delete=models.CASCADE)
+    style = models.ManyToManyField('styles.Style', related_name='style')
+    likes = models.ManyToManyField('jwt_auth.User', related_name='wine_likes')
 
     def __str__(self):
         return f'{self.name}'

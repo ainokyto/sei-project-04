@@ -6,6 +6,7 @@ from rest_framework.exceptions import NotFound
 from .models import Wine
 from .serializers import PopulatedWineSerializer
 
+
 class WineListView(APIView):
 
     def get(self, _request):
@@ -13,7 +14,7 @@ class WineListView(APIView):
         serialized = PopulatedWineSerializer(wines, many=True)
         return Response(serialized.data, status=status.HTTP_200_OK)
 
-class WineDetailView(APIView): # GET ONE
+class WineDetailView(APIView):
 
     def get(self, _request, pk):
         try:
