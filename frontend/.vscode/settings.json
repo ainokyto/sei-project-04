@@ -1,0 +1,22 @@
+{
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#69e9a9",
+    "titleBar.activeBackground": "#69e9a9",
+    "titleBar.inactiveBackground": "#69e9a999",
+    "activityBar.activeBackground": "#69e9a9",
+    "activityBar.activeBorder": "#f16dcd",
+    "activityBar.background": "#69e9a999",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#f16dcd",
+    "activityBarBadge.foreground": "#15202b",
+    "statusBar.border": "#69e9a9",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#69e9a9",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.border": "#69e9a9",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "window.title": "WINO Front-End",
+  "peacock.color": "#69e9a9"
+}

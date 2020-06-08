@@ -6,9 +6,9 @@ LIKE_CHOICES = (
 )
 
 class Like(models.Model):
-    user = models.ForeignKey('jwt_auth.User', on_delete=models.CASCADE)
+    owner = models.ForeignKey('jwt_auth.User', related_name='likes', on_delete=models.CASCADE)
     wine = models.ForeignKey('wines.Wine', on_delete=models.CASCADE)
     value = models.CharField(choices=LIKE_CHOICES, default='Like', max_length=10)
 
     def __str__(self):
-        return f'{self.user}'
+        return f'{self.owner} likes {self.wine}'

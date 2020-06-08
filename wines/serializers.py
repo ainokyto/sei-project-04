@@ -4,6 +4,7 @@ from .models import Wine
 from winemakers.models import Winemaker 
 from styles.serializers import StyleSerializer
 from reviews.serializers import PopulatedReviewSerializer
+# from likes.serializers import PopulatedLikeSerializer
 
 
 class WineSerializer(serializers.ModelSerializer):
@@ -22,3 +23,4 @@ class PopulatedWineSerializer(WineSerializer):
     producer = ProducerSerializer()
     style = StyleSerializer(many=True)
     reviews = PopulatedReviewSerializer(many=True)
+    # likes = PopulatedLikeSerializer(many=True)

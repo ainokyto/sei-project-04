@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model, password_validation as validatio
 from django.contrib.auth.hashers import make_password
 from django.core.exceptions import ValidationError
 from reviews.serializers import ReviewSerializer
+# from likes.serializers import LikeSerializer
 
 User = get_user_model()
 
@@ -11,6 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
     password_confirmation= serializers.CharField(write_only=True)
     reviews = ReviewSerializer(many=True, required=False)
+    # likes = LikeSerializer(many=True, required=False)
 
     def validate(self, data):
         password = data.pop('password')
