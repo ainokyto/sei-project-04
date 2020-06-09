@@ -1,6 +1,7 @@
 import React from 'react'
 import { getOneWinemaker } from '../lib/api'
 import Winecard from './WineCard'
+import { Link } from 'react-router-dom'
 
 class MakerShow extends React.Component {
   state = {
@@ -16,12 +17,11 @@ class MakerShow extends React.Component {
     } catch (err) {
       this.props.history.push('/notfound')
     }
-
   }
 
   render() {
-    if (!this.state.maker) return null
     const { maker } = this.state
+    if (!maker) return null
     console.log(maker)
     return (
       <div className="main">
@@ -36,7 +36,8 @@ class MakerShow extends React.Component {
             <Winecard key={wine.id} {...wine} />
           ))}
 
-        </div>
+        </div>Back to
+        <Link to={`/people/wines`}> All Wines</Link>
       </div>
 
     )
