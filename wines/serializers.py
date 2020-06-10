@@ -23,4 +23,5 @@ class PopulatedWineSerializer(WineSerializer):
     producer = ProducerSerializer()
     style = StyleSerializer(many=True)
     reviews = PopulatedReviewSerializer(many=True)
+    # wine = PopulatedReviewSerializer(many=True)
     # likes = LikeSerializer()

@@ -50,7 +50,7 @@ button:hover {
 //? Navbar
 
 .navbar {
-  margin-top: 0
+  margin-top: 0;
 }
 
 .menuToggle {
@@ -64,14 +64,14 @@ button:hover {
   user-select: none;
 }
 
-.menuToggle a {
+.menuToggle li {
   text-decoration: none;
   color: $grey-dark;
-  
+  cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.menuToggle a:hover {
+.menuToggle li:hover {
   color: $pink;
 }
 
@@ -208,7 +208,7 @@ flex-wrap: wrap;
   img {
     max-height: 300px;
     text-align: center;
-    background-size: cover;
+    
   }
 
 }
@@ -234,10 +234,8 @@ flex-wrap: wrap;
     font-family: 'Lexend Tera', sans-serif;
     color: $pink;
     margin: 20px;
-    align-self: center;
-  }
-
-  h2:hover {
+    align-self: center; }
+    :hover {
     color: $blue;
   }
 
@@ -250,13 +248,10 @@ flex-wrap: wrap;
 
   li {
     color: $pink;
-    margin: 20px;
-  }
-  
-  li:hover {
-    color: $blue;
-  }
+    margin: 20px; }
+    :hover {
+      color: $blue
+    }
 }
-
 
 

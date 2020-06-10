@@ -34,5 +34,9 @@ export const getOneWine = id => {
 }
 
 export const getAllReviews = () => {
-  return axios.get(`api/reviews/`, withHeaders())
+  return axios.get(`/api/reviews/`, withHeaders())
+}
+
+export const createReview = formData => {
+  return axios.post(`api/reviews/`, formData, withHeaders())
 }

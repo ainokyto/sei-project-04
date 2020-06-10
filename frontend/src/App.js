@@ -16,7 +16,7 @@ import ErrorPage from './components/common/ErrorPage'
 import Footer from './components/common/Footer'
 // import SecureRoute from './components/auth/SecureRoute'
 
-console.log('%cThis app was built by Aino Kytola, find me on github: github.com/ainokyto', 'color:blue;font-size:20px;font-weight:bold')
+console.log('%cThis app was built by Aino Kytölä, check out my github: github.com/ainokyto', 'color:pink;font-size:15px;font-weight:bold')
 
 const App = () => (
   <BrowserRouter >

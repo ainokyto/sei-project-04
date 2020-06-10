@@ -17,7 +17,7 @@ class Wine(models.Model):
     description = models.TextField(max_length=300, blank=True)
     producer = models.ForeignKey('winemakers.Winemaker', related_name='wines', on_delete=models.CASCADE)
     style = models.ManyToManyField('styles.Style', related_name='style', blank=True)
-    likes = models.ManyToManyField('jwt_auth.User', related_name='wine_likes', blank=True)
+    # likes = models.ManyToManyField('jwt_auth.User', related_name='wine_likes', blank=True)
 
     def __str__(self):
         return f'{self.name}'

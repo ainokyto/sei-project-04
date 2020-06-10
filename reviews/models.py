@@ -19,4 +19,4 @@ class Review(models.Model):
     )
 
     def __str__(self):
-        return f'Review {self.id} - Wine {self.wine}'
+        return f'Review {self.id} - {self.wine}'
