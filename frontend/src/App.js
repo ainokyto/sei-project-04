@@ -14,16 +14,16 @@ import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import ErrorPage from './components/common/ErrorPage'
 import Footer from './components/common/Footer'
+// import SecureRoute from './components/auth/SecureRoute'
 
 console.log('%cThis app was built by Aino Kytola, find me on github: github.com/ainokyto', 'color:blue;font-size:20px;font-weight:bold')
 
 const App = () => (
   <BrowserRouter >
-    <Hero />
     <Navbar />
+    <Hero />
     <Switch>
       <Route exact path='/' component={Home} />
-      <Route path='/people/wines/:id/reviews' component={Reviews} />
       <Route path='/people/wines/:id' component={WineShow} />
       <Route path='/people/wines' component={WineIndex} />
       <Route path='/people/:id' component={MakerShow} />
@@ -31,6 +31,7 @@ const App = () => (
       <Route path='/about' component={About} />
       <Route path='/register' component={Register} />
       <Route path='/login' component={Login} />
+      <Route path='/reviews' component={Reviews} />
       <Route path='/*' component={ErrorPage} />
     </Switch>
     <Footer />

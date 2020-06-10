@@ -1,13 +1,13 @@
 import React from 'react'
 
 const Footer = () => (
-  <div>
-  <h4>WINO</h4>
-  <ul>
-    <li>Newsletter</li>
-    <li>Social</li>
-    <li>Grower Directory</li>
-  </ul>
+  <div className="footer" >
+    <h2>wino .</h2>
+    <ul>
+      <li>newsletter</li>
+      <li>social</li>
+      <li>grower directory</li>
+    </ul>
   </div>
 )
 

@@ -2,6 +2,7 @@ from rest_framework import serializers
 from django.contrib.auth import get_user_model
 
 from .models import Review
+# from wines.serializers import WineSerializer
 User = get_user_model()
 
 class UserSerializer(serializers.ModelSerializer):
@@ -18,3 +19,4 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 class PopulatedReviewSerializer(ReviewSerializer):
     owner = UserSerializer()
+    # wine = WineSerializer()

@@ -1,10 +1,12 @@
 import React from 'react'
 
 const Hero = () => (
-  <>
-    <h1>WINO</h1>
-    <h3>Natural Wine Community</h3>
-  </>
+  <div className="hero-main">
+    <div className="hero-title-wrapper">
+      <h1 className="hero-title">wino .</h1>
+    </div>
+    <h3>natural wine community</h3>
+  </div>
 )
 
 export default Hero

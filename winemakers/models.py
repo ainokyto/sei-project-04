@@ -2,6 +2,7 @@ from django.db import models
 
 class Winemaker(models.Model):
     name = models.CharField(max_length=50, unique=True)
+    image = models.CharField(max_length=400, blank=True)
     region = models.CharField(max_length=50)
     country = models.CharField(max_length=50)
     owner = models.CharField(max_length=100)

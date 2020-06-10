@@ -1,6 +1,13 @@
 import axios from 'axios'
+import { getToken } from './auth'
 
 //! POST request needs an id, body, headers
+
+const withHeaders = () => {
+  return {
+    headers: { Authorization: `Bearer ${getToken()}` }
+  }
+}
 
 export const registerUser = formData => {
   return axios.post(`/api/auth/register/`, formData)
@@ -24,4 +31,8 @@ export const getAllWines = () => {
 
 export const getOneWine = id => {
   return axios.get(`/api/winemakers/wines/${id}`)
+}
+
+export const getAllReviews = () => {
+  return axios.get(`api/reviews/`, withHeaders())
 }

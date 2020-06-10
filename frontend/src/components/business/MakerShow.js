@@ -24,20 +24,23 @@ class MakerShow extends React.Component {
     if (!maker) return null
     console.log(maker)
     return (
-      <div className="main">
+      <div>
+        <div className="maker-info">
         <h1>{maker.name}</h1>
         <h3>{maker.owner}</h3>
-        <div>
           {maker.region}, {maker.country}
         </div>
-        <div>Wines:
+        <div>
 
           {maker.wines.map(wine => (
-            <Winecard key={wine.id} {...wine} />
-          ))}
+          <Winecard key={wine.id} {...wine} />
+        ))}
 
-        </div>Back to
+        </div>
+        <div>
+          Back to
         <Link to={`/people/wines`}> All Wines</Link>
+        </div>
       </div>
 
     )

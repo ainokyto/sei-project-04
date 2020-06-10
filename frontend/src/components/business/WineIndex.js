@@ -24,8 +24,9 @@ class WineIndex extends React.Component {
     // const { wines } = this.state
     // console.log(wines)
     return (
-      <div>
-        <h1>Wine Index</h1>
+      <>
+        <h1 className="wine-index-h1">all wines</h1>
+      <div className="wine-index">
         {wines.map(wine => (
             <div key={wine.id}>
               <WineCard key={wine.id} {...wine} />
@@ -33,7 +34,7 @@ class WineIndex extends React.Component {
           // <div>{item.name}</div>
         ))}
       </div>
-
+</>
     )
   }
 }
