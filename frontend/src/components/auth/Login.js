@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { loginUser } from '../lib/api'
 import { setToken } from '../lib/auth'
 
@@ -22,14 +23,17 @@ class Login extends React.Component {
     try {
       const res = await loginUser(this.state.formData)
       setToken(res.data.token) // sending token to local storage
-
-      this.props.history.push('/home') // redirecting user to Home
+      this.props.history.push('/people/wines') // redirecting user to Home
     } catch (err) {
-      this.setState({ error: 'Invalid credentials' })
+      this.setState({ error: 'invalid credentials' })
       console.log('response: ', err.response.data.errors)
     }
   }
 
+  // redirecting user back to where they logged in... working on it
+componentDidUpdate = prevProps => {
+  console.log(prevProps.history.location)
+}
 
   render() {
     const { formData, error } = this.state
@@ -40,10 +44,10 @@ class Login extends React.Component {
           <div >
             <form onSubmit={this.handleSubmit}>
               <div>
-                <label >Email</label>
+                <label >email</label>
                 <div>
                   <input
-                    placeholder="Email"
+                    placeholder="email"
                     name="email"
                     onChange={this.handleChange}
                     value={formData.email}
@@ -51,11 +55,11 @@ class Login extends React.Component {
                 </div>
               </div>
               <div >
-                <label >Password</label>
+                <label >password</label>
                 <div >
                   <input
                     type="password"
-                    placeholder="Password"
+                    placeholder="password"
                     name="password"
                     onChange={this.handleChange}
                     value={formData.password}
@@ -64,8 +68,17 @@ class Login extends React.Component {
                 {error && < small>{error}</small>}
               </div>
               <div >
-                <button type="submit">Login</button>
+                <button type="submit">login</button>
               </div>
+              <h3>not a member?
+                <Link to={'/register'}>
+                  <span onMouseEnter={(e) =>
+                    e.target.style.color = '#0147F9'}
+                    onMouseLeave={(e) =>
+                      e.target.style.color = '#232323'}
+                  > register here</span>
+                </Link>
+              </h3>
             </form>
           </div>
         </div>

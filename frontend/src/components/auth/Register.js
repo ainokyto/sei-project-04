@@ -1,6 +1,6 @@
 import React from 'react'
 import { registerUser, loginUser } from '../lib/api'
-import { Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { setToken } from '../lib/auth'
 
 
@@ -59,31 +59,21 @@ class Register extends React.Component {
     let password_confirmation = ''
 
     if (errors.username) {
-      username = 'Name is required'
+      username = 'name is required'
     }
     if (errors.email && errors.email.kind === 'required') {
-      email = 'Email is required'
+      email = 'email is required'
     }
     if (errors.email && errors.email.kind === 'unique') {
-      email = 'Account already exists'
+      email = 'account already exists'
     }
     if (errors.password) {
-      password = 'Password is required'
+      password = 'password is required'
     }
     if (errors.password_confirmation){
-      password_confirmation = 'Passwords do not match'
+      password_confirmation = 'passwords do not match'
     }
     this.setState({ errors: { username, email, password, password_confirmation }})
-  }
-
-  renderRedirect = () => {
-    if (this.state.redirect) {
-      return <Redirect to="/home" />
-    }
-  }
-
-  sendData = () => {
-    this.props.switchForm(false)
   }
 
   render() {
@@ -91,16 +81,15 @@ class Register extends React.Component {
     console.log(this.state)
     return (
       <section>
-      {this.renderRedirect()}
         <div>
           <div>
             <form onSubmit={this.handleSubmit}>
-              <h1>Sign Up</h1><br />
+              <h1>sign up</h1><br />
               <div>
                 <div>
                   <input
-                    className={`input ${errors.username ? 'is-danger' : ''}`}
-                    placeholder="Username"
+                    className={`input ${errors.username ? 'form-error' : ''}`}
+                    placeholder="username"
                     name="username"
                     onChange={this.handleChange}
                     value={formData.username}
@@ -111,8 +100,8 @@ class Register extends React.Component {
               <div>
                 <div>
                   <input
-                    className={`input ${errors.email ? 'is-danger' : ''}`}
-                    placeholder="Email"
+                    className={`input ${errors.email ? 'form-error' : ''}`}
+                    placeholder="email"
                     name="email"
                     onChange={this.handleChange}
                     value={formData.email}
@@ -123,8 +112,8 @@ class Register extends React.Component {
               <div>
                 <div>
                   <input
-                    className={`input ${errors.bio ? 'is-danger' : ''}`}
-                    placeholder="Bio"
+                    className={`input ${errors.bio ? 'form-error' : ''}`}
+                    placeholder="bio"
                     name="bio"
                     onChange={this.handleChange}
                     value={formData.bio}
@@ -135,8 +124,8 @@ class Register extends React.Component {
               <div>
                 <div>
                   <input
-                    className={`input ${errors.profile_image ? 'is-danger' : ''}`}
-                    placeholder="Image URL"
+                    className={`input ${errors.profile_image ? 'form-error' : ''}`}
+                    placeholder="profile image URL"
                     name="profile_image"
                     onChange={this.handleChange}
                     value={formData.profile_image}
@@ -147,9 +136,9 @@ class Register extends React.Component {
               <div>
                 <div>
                   <input
-                    className={`input ${errors.password ? 'is-danger' : ''}`}
+                    className={`input ${errors.password ? 'form-error' : ''}`}
                     type="password"
-                    placeholder="Password"
+                    placeholder="password"
                     name="password"
                     onChange={this.handleChange}
                     value={formData.password}
@@ -160,9 +149,9 @@ class Register extends React.Component {
               <div>
                 <div>
                   <input
-                    className={`input ${errors.password_confirmation ? 'is-danger' : ''}`}
+                    className={`input ${errors.password_confirmation ? 'form-error' : ''}`}
                     type="password"
-                    placeholder="Password Confirmation"
+                    placeholder="password confirmation"
                     name="password_confirmation"
                     onChange={this.handleChange}
                     value={formData.password_confirmation}
@@ -173,9 +162,15 @@ class Register extends React.Component {
               <div>
                 <button type="submit">Register</button>
               </div>
-              <div>
-                <button onClick={this.sendData} type="button">Have an account? Sign in here</button>
-              </div>
+              <h3>already have an account?
+                <Link to={'/login'}>
+                  <span onMouseEnter={(e) =>
+                    e.target.style.color = '#0147F9'}
+                    onMouseLeave={(e) =>
+                      e.target.style.color = '#232323'}
+                  > sign in here</span>
+                </Link>
+              </h3>
             </form>
           </div>
         </div>

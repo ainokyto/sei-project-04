@@ -3,11 +3,16 @@ import { Link } from 'react-router-dom'
 
 const MakerCard = ({ id, name, region, country, image }) => (
 
-  <div className="main">
+  <div className="card-container">
     <div className="card">
       <Link to={`/people/${id}/`}>
-        <h4>{name}</h4>
-        <h6>{region}, {country}</h6>
+        <div className="card-img-wrapper">
+          <img src={image} alt={name} />
+        </div>
+        <div className="card-info">
+          <h4>{name}</h4>
+          <h6>{region}, {country}</h6>
+        </div>
       </Link>
     </div>
   </div>

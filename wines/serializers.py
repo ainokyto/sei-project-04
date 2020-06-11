@@ -17,7 +17,7 @@ class ProducerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Winemaker
-        fields = ('id', 'name')
+        fields = ('id', 'name', 'country', 'region')
 
 class PopulatedWineSerializer(WineSerializer):
     producer = ProducerSerializer()

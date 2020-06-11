@@ -25,22 +25,33 @@ class MakerShow extends React.Component {
     console.log(maker)
     return (
       <div>
-        <div className="maker-info">
-        <h1>{maker.name}</h1>
-        <h3>{maker.owner}</h3>
-          {maker.region}, {maker.country}
+        <div className="maker-header">
+          <div className="show-title">
+            <h1>{maker.name}</h1>
+          </div>
+            <img className="maker-img" src={maker.image} alt={maker.name} />
+        </div>
+
+        <div className="show-title">
+          <h3>{maker.owner}</h3>
+          <h3>{maker.region}, {maker.country}</h3>
         </div>
         <div>
 
           {maker.wines.map(wine => (
-          <Winecard key={wine.id} {...wine} />
-        ))}
+            <Winecard key={wine.id} {...wine} />
+          ))}
 
         </div>
-        <div>
-          Back to
-        <Link to={`/people/wines`}> All Wines</Link>
-        </div>
+        <Link to={`/people/wines`}>
+          <h3 className="show-title" >back to
+          <span onMouseEnter={(e) =>
+              e.target.style.color = '#0147F9'}
+              onMouseLeave={(e) =>
+                e.target.style.color = '#232323'}
+            > all wines</span>
+          </h3>
+        </Link>
       </div>
 
     )

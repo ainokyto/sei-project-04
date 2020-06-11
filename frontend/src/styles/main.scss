@@ -179,47 +179,104 @@ flex-wrap: wrap;
   padding: 20px;
 }
 
-//? WineCard
+//? Cards
 
-.winecard-container {
-  display: inline-flex;
-  // flex-direction: row;
+.reviews {
+  display:flex;
 }
 
-.wine-card {
+.card-container {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.card {
   border: 2px $pink solid;
   box-shadow: 0 0 10px $grey-light;
   margin: 10px;
+  height: 400px;
   width: 350px;
+  
   text-align: center;
 
 
-  .wine-img-wrapper {
+  .card-img-wrapper {
     height: 300px;
   }
 
-  .wine-card-info {
+  .card-info {
+    
     color: $grey-dark;
-    h5 {
-      text-align: justify;
+    h4 {
+      text-align: center;
+      padding: 25px;
     }
   }
 
   img {
     max-height: 300px;
+    max-width: 290px;
     text-align: center;
-    
+    padding: 20px;
   }
 
+  p {
+    padding: 20px;
+  }
 }
 
-//? MakerShow
+.review-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
-.maker-info {
+//? MakerShow & WineShow
+
+.show-title {
   margin: 50px;
   h1 {
     font-size: 40px;
   }
+}
+
+.maker-header {
+  display: flex;
+  align-items: center;
+}
+
+.maker-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.show-info-container {
+  display: flex;
+  margin: 0 80px;
+  border: 2px yellow solid;
+  p {
+    border: 2px blue solid;
+  }
+}
+
+.show-info {
+  border: 2px green solid;
+  
+}
+
+.img-wrapper {
+  border: 2px red solid;
+  height: 80vh;
+  width: 60vw;
+  
+  img {
+    max-height: 60vh;
+    max-width: 40vw;
+    object-fit: contain;
+  } 
 }
 
 //? Footer
@@ -254,4 +311,15 @@ flex-wrap: wrap;
     }
 }
 
+//? Forms
 
+.form-error {
+  color: red;
+}
+
+.form-container {
+  border: 5px royalblue solid;
+  height: 50vh;
+  width: 50vw;
+  
+}
