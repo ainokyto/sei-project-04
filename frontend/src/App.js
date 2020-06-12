@@ -10,6 +10,7 @@ import Reviews from './components/business/Reviews'
 import WineShow from './components/business/WineShow'
 import About from './components/business/About'
 import WineIndex from './components/business/WineIndex'
+import Profile from './components/business/Profile'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import ErrorPage from './components/common/ErrorPage'
@@ -28,6 +29,7 @@ const App = () => (
       <Route path='/people/wines' component={WineIndex} />
       <Route path='/people/:id' component={MakerShow} />
       <Route path='/people' component={MakersIndex} />
+      <Route path='/profile' component={Profile} />
       <Route path='/about' component={About} />
       <Route path='/register' component={Register} />
       <Route path='/login' component={Login} />

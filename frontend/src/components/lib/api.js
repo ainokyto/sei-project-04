@@ -1,8 +1,6 @@
 import axios from 'axios'
 import { getToken } from './auth'
 
-//! POST request needs an id, body, headers
-
 const withHeaders = () => {
   return {
     headers: { Authorization: `Bearer ${getToken()}` }
@@ -15,6 +13,10 @@ export const registerUser = formData => {
 
 export const loginUser = formData => {
   return axios.post(`/api/auth/login/`, formData)
+}
+
+export const getCurrentUser = () => {
+  return axios.get (`api/auth/profile/`, withHeaders())
 }
 
 export const getAllWinemakers = () => {
@@ -39,4 +41,12 @@ export const getAllReviews = () => {
 
 export const createReview = formData => {
   return axios.post(`api/reviews/`, formData, withHeaders())
+}
+
+export const editReview = (id, formData) => {
+  return axios.put(`api/reviews/${id}`, formData, withHeaders())
+}
+
+export const deleteReview = id => {
+  return axios.delete(`api/reviews/${id}`, withHeaders())
 }
