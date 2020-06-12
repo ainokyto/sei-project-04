@@ -9,24 +9,35 @@ class Profile extends React.Component {
   state = {
     reviews: [],
     // formData //!
-    isDeleted: false
   }
 
   async componentDidMount() {
-    const res = await getCurrentUser()
-    // console.log(res.data)
-    const reviews = res.data.reviews.reverse()
-    console.log(reviews)
-    this.setState({ reviews, isDeleted: false })
+    try {
+      this.loadData()
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  loadData = async () => {
+    try {
+      const res = await getCurrentUser()
+      // console.log(res.data)
+      const reviews = res.data.reviews.reverse()
+      console.log(reviews)
+      this.setState({ reviews })
+    } catch (err) {
+      this.props.history.push('/notfound')
+    }
   }
 
   handleDelete = async event => {
     try {
       const reviewId = event.target.value
       await deleteReview(reviewId)
-      // this.props.history.push('/profile')
-      this.setState({ isDeleted: true })
+      this.props.history.push('/profile')
       notify.show('review deleted', 'custom', 4000, toastColor)
+      this.loadData()
     } catch (err) {
       this.props.history.push('/notfound')
     }

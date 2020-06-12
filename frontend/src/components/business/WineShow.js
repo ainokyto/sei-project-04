@@ -2,7 +2,6 @@ import React from 'react'
 import { getOneWine } from '../lib/api'
 import { isAuthenticated } from '../lib/auth'
 import { Link } from 'react-router-dom'
-import ReviewForm from './ReviewForm'
 import ReviewAuth from './ReviewAuth'
 
 class WineShow extends React.Component {
@@ -45,11 +44,11 @@ class WineShow extends React.Component {
               <h4>country: </h4><p> {wine.producer.country}</p>
               <h4>region: </h4><p> {wine.producer.region}</p>
               <h4>grapes: </h4><p> {wine.grape_varieties}</p>
-              
+            <h4>description: </h4>  
             <p>{wine.description}</p>
             {isAuthenticated() ? 
                 <Link to={`/reviews`}>
-                <button>review this wine</button>
+                <button>write a review</button>
                 </Link>
               : <ReviewAuth /> }
             </div>

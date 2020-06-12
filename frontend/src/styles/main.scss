@@ -21,8 +21,14 @@ p {
   font-family: 'Roboto', sans-serif;
 }
 
+button {
+  padding: 5px;
+}
+
 button:hover {
-  color: #fff
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10%;
 }
 
 //? Hero
@@ -167,27 +173,27 @@ button:hover {
   transform: none;
 }
 
-//? WineIndex
+//? Index
 
-.wine-index {
+.index {
 display: flex;
 flex-wrap: wrap;
 }
 
-.wine-index-h1 {
+.index-h1 {
+  font-family:'Lexend Tera', sans-serif;
   margin: 20px;
   padding: 20px;
 }
 
 //? Cards
 
-.reviews {
-  display:flex;
-}
-
 .card-container {
   display: inline-flex;
   justify-content: center;
+  :hover {
+    background-color: #fffafa;
+}
 }
 
 .card {
@@ -196,7 +202,6 @@ flex-wrap: wrap;
   margin: 10px;
   height: 400px;
   width: 350px;
-  
   text-align: center;
 
 
@@ -205,7 +210,7 @@ flex-wrap: wrap;
   }
 
   .card-info {
-    
+
     color: $grey-dark;
     h4 {
       text-align: center;
@@ -214,8 +219,8 @@ flex-wrap: wrap;
   }
 
   img {
-    max-height: 300px;
-    max-width: 290px;
+    max-height: 280px;
+    max-width: 280px;
     text-align: center;
     padding: 20px;
   }
@@ -225,12 +230,6 @@ flex-wrap: wrap;
   }
 }
 
-.review-img {
-  height: 100px;
-  width: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-}
 
 //? MakerShow & WineShow
 
@@ -255,24 +254,29 @@ flex-wrap: wrap;
 
 .show-info-container {
   display: flex;
-  margin: 0 80px;
-  border: 2px yellow solid;
+  margin: 40px 80px 0 80px;
+  
   p {
-    border: 2px blue solid;
+    padding: 0 20px;
+  }
+  button {
+    margin: 20px;
   }
 }
 
 .show-info {
-  border: 2px green solid;
-  
+  padding: 40px;
+  margin-left: 20px;
+  border: 3px #efefef solid;
 }
 
 .img-wrapper {
-  border: 2px red solid;
+  border: 3px #efefef solid;
   height: 80vh;
   width: 60vw;
   
   img {
+    padding-top: 70px;
     max-height: 60vh;
     max-width: 40vw;
     object-fit: contain;
@@ -310,6 +314,28 @@ flex-wrap: wrap;
     }
 }
 
+//? Reviews
+
+.reviews {
+  display:flex;
+}
+
+.reviews-latest {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reviews-title {
+  margin: 40px;
+}
+
+.review-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 //? Forms
 
 .form-error {
@@ -317,8 +343,31 @@ flex-wrap: wrap;
 }
 
 .form-container {
-  border: 5px royalblue solid;
-  height: 50vh;
-  width: 50vw;
-  
+  border: 2px $pink solid;
+  box-shadow: 0 0 10px $grey-light;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  width: 40vw;
+  .selectbox {
+    margin: 10px;
+  }
+  label {
+    margin: 10px;
+    padding: 10px;
+  }
+  select {
+    margin: 10px;
+    padding: 5px;
+  }
+  textarea {
+    margin: 10px;
+    padding: 40px 20px;
+  }
+  button {
+    margin: 10px;
+  }
 }
+

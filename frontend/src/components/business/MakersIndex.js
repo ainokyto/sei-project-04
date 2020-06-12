@@ -26,17 +26,14 @@ class MakersIndex extends React.Component {
     console.log(makers)
 
     return (
-      <div className="main">
-        <div className="column">
-          <div className="card-wrapper">
-
-            {makers.map(maker => (
-                <MakerCard key={maker.id} {...maker} />
-            ))}
-
-          </div>
+      <>
+        <h1 className="index-h1">all producers</h1>
+        <div className="index">
+          {makers.map(maker => (
+            <MakerCard key={maker.id} {...maker} />
+          ))}
         </div>
-      </div>
+      </>
     )
   }
 }

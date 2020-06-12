@@ -4,7 +4,7 @@
   "pk": 1,
   "fields": {
     "name": "Podere Pradarolo",
-    "image": "",
+    "image": "https://cdn.shopify.com/s/files/1/0157/6127/6982/collections/3G2E0058_copy_1440x.jpg?v=1577793319",
     "region": "Emilia Romagna",
     "country": "Italy",
     "owner": "Alberto & Claudia Carretti",
@@ -16,9 +16,9 @@
   "pk": 4,
   "fields": {
     "name": "Noita Winery",
-    "image": "",
+    "image": "https://luomuviinit.fi/media/97710/sorting_grapes_noita_web.jpg",
     "region": "Burgenland / Fiskars",
-    "country": "Finland",
+    "country": "Austria / Finland",
     "owner": "Simon McCabe, Jari Leinonen",
     "avg_yields_per_year_btl": 3000
   }
@@ -28,7 +28,7 @@
   "pk": 5,
   "fields": {
     "name": "Radikon",
-    "image": "",
+    "image": "https://www.livewine.it/wp-content/uploads/2015/01/Sasa-and-Stanko-in-the-cellar_.jpg",
     "region": "Friuli Venezia Giulia",
     "country": "Italy",
     "owner": "Sa\u0161a, Suzana & Stanko Radikon",
@@ -40,7 +40,7 @@
   "pk": 6,
   "fields": {
     "name": "Schmeltzer's Weingut",
-    "image": "",
+    "image": "https://zrswines.com/wp-content/uploads/2017/04/Screen-Shot-2017-04-12-at-3.38.49-PM.png",
     "region": "Burgenland",
     "country": "Austria",
     "owner": "Georg Schmeltzer",
@@ -52,7 +52,7 @@
   "pk": 7,
   "fields": {
     "name": "2Naturkinder",
-    "image": "",
+    "image": "https://2naturkinder.de/wp-content/uploads/2017/07/cropped-3J5A5322.jpg",
     "region": "Franken",
     "country": "Germany",
     "owner": "Melanie Drese & Michael V\u00f6lker",
@@ -64,7 +64,7 @@
   "pk": 8,
   "fields": {
     "name": "Domaine Matassa",
-    "image": "",
+    "image": "https://lh3.googleusercontent.com/proxy/ehqcCZH2IBRODBCoS0Pw7pVMjABZzdzzgqUfmHgkz-Lz3a6lf6oepD6qwB6w0o0sb-GQCA_yyewmMbPOpqRldI-S_6ZsdInhJ6s15rE",
     "region": "Roussillon",
     "country": "France",
     "owner": "Tom Lubbe",
@@ -76,7 +76,7 @@
   "pk": 9,
   "fields": {
     "name": "Vandal Wine",
-    "image": "",
+    "image": "https://images.squarespace-cdn.com/content/v1/599d321346c3c4da007be455/1570963210482-BH3CN41GXID84Q0D33EM/ke17ZwdGBToddI8pDm48kLdJ3j-ibWYU20S6E0aDMAl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmbFTSCh3GLTYkz25V6Y8urJIuD2y7fSNCnhoa9WQ4jB08vps1ci3DLG5R66hSaaIi/PHOTO-2019-10-10-11-52-19.jpg",
     "region": "Roussillon",
     "country": "France",
     "owner": "Rapha\u00ebl Baissas de Chastenet",
@@ -88,7 +88,7 @@
   "pk": 10,
   "fields": {
     "name": "Julien Peyras",
-    "image": "",
+    "image": "https://deraisin.ch/wp-content/uploads/2014/11/julien-peyras-v.jpg",
     "region": "Languedoc",
     "country": "France",
     "owner": "Julien Peyras",
@@ -100,7 +100,7 @@
   "pk": 11,
   "fields": {
     "name": "Weingut Koppitsch",
-    "image": "",
+    "image": "https://www.paasburg.de/wp-content/uploads/2015/04/Koppitsch-Portrait-Ausschnitt-300x274.jpg",
     "region": "Burgenland",
     "country": "Austria",
     "owner": "Maria & Alex Koppitsch",
@@ -111,8 +111,8 @@
   "model": "winemakers.winemaker",
   "pk": 12,
   "fields": {
-    "name": "Domaine S\u00e9bastien Riffault",
-    "image": "",
+    "name": "Domaine S\u00e9bastien et Etienne Riffault",
+    "image": "https://www.wineterroirs.com/images/2007/04/30/riffault_sebastien_futs.jpg",
     "region": "Sancerre",
     "country": "France",
     "owner": "S\u00e9bastien Riffault",
@@ -148,7 +148,7 @@
   "pk": 15,
   "fields": {
     "name": "Rennersistas",
-    "image": "https://cdn.rawwine.com/wp-content/uploads/um-gallery/2115/Weine-2015.jpg",
+    "image": "https://static1.squarespace.com/static/58ecfd408419c26fd6b7f2d8/58ed004959cc6813aabc7a6a/590a6fda17bffc01e669b8ff/1506111297353/rennersistas61470828960-1475068564.jpg?format=1500w",
     "region": "Burgenland",
     "country": "Austria",
     "owner": "Susanne & Stephanie Renner",

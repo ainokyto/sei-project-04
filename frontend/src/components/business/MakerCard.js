@@ -10,8 +10,8 @@ const MakerCard = ({ id, name, region, country, image }) => (
           <img src={image} alt={name} />
         </div>
         <div className="card-info">
-          <h4>{name}</h4>
-          <h6>{region}, {country}</h6>
+          <h3>{name}</h3>
+          <h5>{region}, {country}</h5>
         </div>
       </Link>
     </div>

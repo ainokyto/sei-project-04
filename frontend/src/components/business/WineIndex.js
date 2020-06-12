@@ -25,16 +25,16 @@ class WineIndex extends React.Component {
     // console.log(wines)
     return (
       <>
-        <h1 className="wine-index-h1">all wines</h1>
-      <div className="wine-index">
-        {wines.map(wine => (
+        <h1 className="index-h1">all wines</h1>
+        <div className="index">
+          {wines.map(wine => (
             <div key={wine.id}>
               <WineCard key={wine.id} {...wine} />
             </div>
-          // <div>{item.name}</div>
-        ))}
-      </div>
-</>
+            // <div>{item.name}</div>
+          ))}
+        </div>
+      </>
     )
   }
 }
