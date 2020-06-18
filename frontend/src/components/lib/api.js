@@ -20,19 +20,19 @@ export const getCurrentUser = () => {
 }
 
 export const getAllWinemakers = () => {
-  return axios.get('/api/winemakers')
+  return axios.get('/api/winemakers/')
 } 
 
 export const getOneWinemaker = id => {
-  return axios.get(`/api/winemakers/${id}`)
+  return axios.get(`/api/winemakers/${id}/`)
 }
 
 export const getAllWines = () => {
-  return axios.get('/api/winemakers/wines')
+  return axios.get('/api/winemakers/wines/')
 } 
 
 export const getOneWine = id => {
-  return axios.get(`/api/winemakers/wines/${id}`)
+  return axios.get(`/api/winemakers/wines/${id}/`)
 }
 
 export const getAllReviews = () => {
@@ -44,9 +44,9 @@ export const createReview = formData => {
 }
 
 export const editReview = (id, formData) => {
-  return axios.put(`api/reviews/${id}`, formData, withHeaders())
+  return axios.put(`api/reviews/${id}/`, formData, withHeaders())
 }
 
 export const deleteReview = id => {
-  return axios.delete(`api/reviews/${id}`, withHeaders())
+  return axios.delete(`api/reviews/${id}/`, withHeaders())
 }
