@@ -1,0 +1,26 @@
+[
+  {
+    "model": "reviews.review",
+    "pk": 1,
+    "fields": {
+      "rating": 5,
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "created_at": "2020-06-10 22:51:38.382116+03",
+      "updated_at": "2020-06-10 22:51:38.382145+03",
+      "owner": 1,
+      "wine": 27
+    }
+  },
+    {
+      "model": "reviews.review",
+      "pk": 2,
+      "fields": {
+        "rating": 5,
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "created_at": "2020-06-10 22:50:48.2404+03",
+        "updated_at": "2020-06-10 22:50:48.240451+03",
+        "owner": 3,
+        "wine": "20" 
+    }
+  }
+]
