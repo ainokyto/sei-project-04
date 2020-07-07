@@ -1,46 +1,108 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #4: A Django + React App
-## Overview
-**You’ve come a long way, and it's time to show it.** This will be your final project and is an opportunity to re cap and cement many of the topics we have covered in the last 12 weeks.
-**Remember:** simple code is stable code, so always favour refactoring and bug fixing over adding more functionality.
-With this in mind, you need to be smart about how you plan, limit your project scope to be achievable (in terms of functionality) and focus on quality rather than quantity.
-**Solo or Group?**
-You are free to work alone or in a group. Both ways have their pros and cons. Remember if you are working in a team that you are all on the same page and working towards the same goal.
-Make sure you review your project proposal with your instructor so you can make sure it's **something you can accomplish in the limited time we have**. You will have some time after the project to add extra functionality before your Meet & Hire!
----
-## Technical Requirements
-You must:
-* **Build a full-stack application** by making your own backend and your own front-end
-* **Use a Python Django API** using Django REST Framework to serve your data from a Postgres database
-* **Consume your API with a separate front-end** built with React
-* **Be a complete product** which most likely means multiple relationships and CRUD functionality for at least a couple of models
-* **Implement thoughtful user stories/wireframes** that are significant enough to help you know which features are core MVP and which you can cut
-* **Have a visually impressive design** to kick your portfolio up a notch and have something to wow future clients & employers. **ALLOW** time for this.
-* **Be deployed online** so it's publicly accessible.
-* **React Hooks** is optional for this project
----
-## Necessary Deliverables
-* A **working app** hosted on the internet
-* A **link to your hosted working app** in the URL section of your Github repo
-* A **git repository hosted on Github**, with a link to your hosted project, and frequent commits dating back to the _very beginning_ of the project
-* **A `readme.md` file** with:
-    * An embedded screenshot of the app
-    * Explanations of the **technologies** used
-    * A couple paragraphs about the **general approach you took**
-    * **Installation instructions** for any dependencies
-    * Link to your **user stories/wireframes** – sketches of major views / interfaces in your application
-    * Link to your **pitch deck/presentation** – documentation of your wireframes, user stories, and proposed architecture
-    * Descriptions of any **unsolved problems** or **major hurdles** you had to overcome
----
-## Suggested Ways to Get Started
-* **Don’t get too caught up in too many awesome features** – simple is always better. Build something impressive that does one thing well.
-* **Design first.** Planning with user stories & wireframes before writing code means you won't get distracted changing your mind – you'll know what to build, and you can spend your time wisely by just building it.
-* **Don’t hesitate to write throwaway code** to solve short term problems.
-* **Read the docs for whatever technologies / frameworks / API’s you use**.
-* **Write your code DRY** and **build your APIs RESTful**.
-* **Be consistent with your code style.** 
-* **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version.
-* **Keep user stories small and well-defined**, and remember – user stories focus on what a user needs, not what development tasks need accomplishing.
-* **Write code another developer wouldn't have to ask you about**. Do your naming conventions make sense? Would another developer be able to look at your app and understand what everything is?
-* **Make it all well-formatted.** Are you indenting, consistently? Can we find the start and end of every div, curly brace, etc?
-* **Comment your code.** Will someone understand what is going on in each block or function? Even if it's obvious, explaining the what & why means someone else can pick it up and get it.
-* **Write pseudocode before you write actual code.** Thinking through the logic of something helps.
+# WINO, a Python Django API and React app - GA Project Four
+
+My final dev project for the Software Engineering Immersive course, a complex full-stack application built with Django REST Framework and React.
+
+WINO is a Yelp-style social review site aimed for natural wine lovers, where users can write and read reviews of natural wines and learn more about the producers behind their favourite bottles. 
+
+The app has been deployed with Heroku and is available [here](http://winoaino.herokuapp.com/).
+
+## Brief & Timeframe:
+
+* Build a full-stack application by making your own backend and your own front-end
+* Use a Python Django API using Django REST Framework to serve your data from a Postgres database
+* Consume your API with a separate front-end built with React
+* Be a complete product which most likely means multiple relationships and CRUD functionality for at least a couple of models
+* Implement thoughtful user stories/wireframes that are significant enough to help you know which features are core MVP and which you can cut
+* Have a visually impressive design
+* Be deployed online so it's publicly accessible
+* Write your code DRY and build your APIs RESTful.
+* Timeframe: 8 days
+
+## Technologies Used:
+
+* Django
+* Django REST Framework
+* Postgres
+* SQL
+* PyJWT
+* JavaScript (ES6)
+* React.js
+* HTML, CSS, Sass
+* Axios
+* Git + GitHub
+* react-notify-toast
+* react-router-dom
+* react-select
+
+## Demonstration of the App Flow
+
+### Functionality 
+
+The functionality is not too different from other social review sites. Users can:
+
+* Register & login
+* View a curated feed of natural wine producers
+* View a show-page of a producer
+* View a curated feed of natural wines
+* View a show-page of a wine
+* Post, edit and delete reviews on natural wines
+
+## Process
+
+### Styling
+
+I wanted to challenge myself with the styling, so I decided to style everything completely from scratch without any CSS frameworks. In an attempt to make the site appear clean but with a hip flare, I opted for a B&W scheme with a colour pop of pastel pink, and a few font options.
+
+### Featured piece of code
+
+In order to send the right information to the frontend, in this serialiser I'm populating my WineSerializer with data from different models with different SQL relationships - One-to-One (producer), Many-To-Many (styles) and One-To-Many (reviews). 
+
+```python
+from rest_framework import serializers
+from .models import Wine
+from winemakers.models import Winemaker 
+from styles.serializers import StyleSerializer
+from reviews.serializers import PopulatedReviewSerializer
+
+class WineSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Wine
+        fields = '__all__'
+
+class ProducerSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Winemaker
+        fields = ('id', 'name', 'country', 'region')
+
+class PopulatedWineSerializer(WineSerializer):
+    producer = ProducerSerializer()
+    style = StyleSerializer(many=True)
+    reviews = PopulatedReviewSerializer(many=True)
+```
+
+### Known bugs or errors
+
+* The navigation menu does not close on re-render
+* Error handling for forms is not quite there yet
+
+### Wins and Blockers
+
+Working out the SQL database relationships was a bit of a hurdle. Having previously worked with NoSQL databases only, I found it difficult to populate my serialisers in the right way to be able to send relevant data to the frontend, when some models had One-To-Many and Many-To-Many relationships simultaneously.
+
+I'm very pleased with the seeds file I created to populate the app with some real-life data from the natural wine world. I also took this project as an opportunity to stretch my frontend developer muscles and set myself the ambitious goal to make pixel-perfect design, so having it turn out quite nice and slick was rewarding.
+
+## Future Features
+
+Some added functionality I would have liked to add if I had more time: 
+
+* Search functionality with the ability to filter wines or producers by region, wine style etc.
+* Users could like their favourite wines
+* Maps to show geographical locations for different producers 
+
+## Key learnings
+
+Going solo for the final project was definitely both a blessing and a curse, as it meant me miss out on some of the perks of collaborative work, such as bouncing ideas off team mates and sorting out any hurdles much sooner. On the flip side I'm happy that I decided to trust my ability to build a full-stack app on my own, as all the challenges I faced and was able to overcome in this project helped boost my confidence as a developer.
+
+A big learning experience for me had to do with managing my own workload. I'm afraid I was overly confident about the time and effort that goes into building a full-stack app, and in a state of uninformed optimism, kept on adding new models to the backend to the point where I just couldn't build my frontend fast enough to display all the features. In the end, the project would have been big enough to keep a team of 3 developers well busy. I decided not to worry about this too much though, and instead focused on finishing what I could with the time that I had.
