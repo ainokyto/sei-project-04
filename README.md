@@ -40,11 +40,23 @@ Please note that Heroku servers go to sleep after not receiving traffic for 1 ho
 
 ## Demonstration of the App Flow
 
-![WINO reviews](./readme_assets/winoflow.png)
+#### Producers index
 
-#### User is then taken to the sign in / register page, based on their preference.
+![WINO producers](./readme_assets/producers.png)
 
-After authentication, user has access to proceed to the reviews page. Here they can add their own reviews, and read reviews left by others:
+#### Producer show
+
+![WINO koppitsch producerpage](./readme_assets/koppitsch.png)
+
+#### Wine index
+
+![WINO wine index](./readme_assets/wineindex.png)
+
+#### Wine show
+
+![WINO wineshow](./readme_assets/showwine.png)
+
+#### In order to see or write reviews, user is then taken to the sign in / register page, based on their preference. After authentication, user has access to proceed to the reviews page. Here they can add their own reviews, and read reviews left by others:
 
 ![WINO reviews](./readme_assets/writereview.png)
 
@@ -67,12 +79,12 @@ I started the design process by planning. First, I sketched out an Entity Relati
 
 After I was happy with my ERD, I started fleshing out the front-end by creating wireframes of the main UI I wanted my app to have. Here are some examples, from <b>index</b>, <b>show</b> and <b>review</b>:
 
-#### Index
-![WINO ERD](./readme_assets/index.png)
-#### Show
-![WINO ERD](./readme_assets/show.png)
-#### Review
-![WINO ERD](./readme_assets/review.png)
+#### Wines Index
+![WINO wireframe index](./readme_assets/index.png)
+#### Wines Show
+![WINO wireframe show](./readme_assets/show.png)
+#### Review wine
+![WINO wireframe rewiex](./readme_assets/review.png)
 
 I started the development process by building my models, views and serialisers in Django REST Framwork. I spent a good three days building these as I wanted to ascertain that everything was working as I expected. I used Insomnia REST Client to test my backend requests, and TablePlus to visualise my SQL databases. 
 
