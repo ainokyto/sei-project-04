@@ -4,6 +4,8 @@ My final dev project for the Software Engineering Immersive course, a complex fu
 
 WINO is a Yelp-style social review site aimed for natural wine lovers, where users can write and read reviews of natural wines and learn more about the producers behind their favourite bottles. 
 
+![WINO mobile](./readme_assets/winomobile.gif)
+
 The app has been deployed with Heroku and is available [here](http://winoaino.herokuapp.com/).
 
 Please note that Heroku servers go to sleep after not receiving traffic for 1 hour, so the first request might take a moment as the servers wake up. Subsequent requests will perform normally.
@@ -38,7 +40,13 @@ Please note that Heroku servers go to sleep after not receiving traffic for 1 ho
 
 ## Demonstration of the App Flow
 
+![WINO reviews](./readme_assets/winoflow.png)
 
+#### User is then taken to the sign in / register page, based on their preference.
+
+After authentication, user has access to proceed to the reviews page. Here they can add their own reviews, and read reviews left by others:
+
+![WINO reviews](./readme_assets/writereview.png)
 
 ### Functionality 
 
@@ -57,15 +65,18 @@ I started the design process by planning. First, I sketched out an Entity Relati
 
 ![WINO ERD](./readme_assets/relationships.png)
 
-After I was happy with my ERD, I started fleshing out the frontend by creating wireframes of the main UI I wanted my app to have. Here are some examples, from <b>index</b>, <b>show</b> and <b>review</b>:
+After I was happy with my ERD, I started fleshing out the front-end by creating wireframes of the main UI I wanted my app to have. Here are some examples, from <b>index</b>, <b>show</b> and <b>review</b>:
 
+#### Index
 ![WINO ERD](./readme_assets/index.png)
+#### Show
 ![WINO ERD](./readme_assets/show.png)
+#### Review
 ![WINO ERD](./readme_assets/review.png)
 
-I started the development process by building my models, views and serialisers in Django REST Framwork. I spent a good three days building this as I wanted to ascertain that everything works as it should. I used Insomnia REST Client to test my backend requests, and TablePlus to visualise my SQL databases. 
+I started the development process by building my models, views and serialisers in Django REST Framwork. I spent a good three days building these as I wanted to ascertain that everything was working as I expected. I used Insomnia REST Client to test my backend requests, and TablePlus to visualise my SQL databases. 
 
-By the start of day four, I was happy with the backend to the point where I was ready to move on to my frontend. I quickly bootstrapped together the main components: Home, Register, Login, Index, View. By this stage unfortunately, I became aware of rather a major flaw in my planning: I had taken on more than I could manage within the timeframe given. I had severely underestimated the time it would require to build the frontend for 6 models, and when the amount of my React components was skirting on 20, I had no choice but to choose my battles. I then decided to invest the time I had left to tying up loose ends, rather than trying to build new UI's for the functionality I had built in the backend.
+By the start of day four, I was happy with the backend to the point where I was ready to move on to my front-end. I quickly bootstrapped together the main components: Home, Register, Login, Index, View. By this stage unfortunately, I became aware of rather a major flaw in my planning: I had taken on more than I could manage within the timeframe given. I had severely underestimated the time it would require to build the front-end for 6 models, and when the amount of my React components was skirting on 20, I had no choice but to choose my battles. I then decided to invest the time I had left to tying up loose ends, rather than trying to build new UI's for the functionality I had built in the backend.
 
 ### Styling
 
@@ -73,7 +84,7 @@ I wanted to challenge myself with the styling, so I decided to style everything 
 
 ### Featured piece of code
 
-In order to send the right information to the frontend, in this serialiser I'm populating my WineSerializer with data from different models with different SQL relationships - One-to-One (producer), Many-To-Many (styles) and One-To-Many (reviews). 
+In order to send the right information to the front-end, in this serialiser I'm populating my WineSerializer with data from different models with different SQL relationships - One-to-One (producer), Many-To-Many (styles) and One-To-Many (reviews). 
 
 ```python
 from rest_framework import serializers
@@ -107,9 +118,9 @@ class PopulatedWineSerializer(WineSerializer):
 
 ### Wins and Blockers
 
-Working out the SQL database relationships was a bit of a hurdle. Having previously worked with NoSQL databases only, I found it difficult to populate my serialisers in the right way to be able to send relevant data to the frontend, when some models had simultaneous One-To-Many and Many-To-Many relationships.
+Working out the SQL database relationships was a bit of a hurdle. Having previously worked with NoSQL databases only, I found it difficult to populate my serialisers in the right way to be able to send relevant data to the front-end, when some models had simultaneous One-To-Many and Many-To-Many relationships.
 
-I'm very pleased with the seeds file I created to populate the app with some real-life data from the natural wine world. I also took this project as an opportunity to stretch my frontend developer muscles and set myself the ambitious goal to make pixel-perfect design, so having it turn out quite nice and slick was rewarding.
+I'm very pleased with the seeds file I created to populate the app with some real-life data from the natural wine world. I also took this project as an opportunity to stretch my front-end developer muscles and set myself the ambitious goal to make pixel-perfect design, so having it turn out quite nice and slick was rewarding.
 
 ## Future Features
 
@@ -123,4 +134,4 @@ Some added functionality I would have liked to add if I had more time:
 
 Going solo for the final project was definitely both a blessing and a curse, as it meant me miss out on some of the perks of collaborative work, such as bouncing ideas off team mates and sorting out any hurdles much sooner. On the flip side I'm happy that I decided to trust my ability to build a full-stack app on my own, as all the challenges I faced and was able to overcome in this project helped boost my confidence as a developer.
 
-A big learning experience for me had to do with managing my own workload. I'm afraid I was overly confident about the time and effort that goes into building a full-stack app, and in a state of uninformed optimism, kept on adding new models to the backend to the point where I just couldn't build my frontend fast enough to cope with all the functionality. In the end, the project would have been big enough to keep a team of 3 developers well busy. I decided not to worry about this too much though, and instead focused on finishing what I could with the time that I had.
+A big learning experience for me had to do with managing my own workload. I'm afraid I was overly confident about the time and effort that goes into building a full-stack app, and in a state of uninformed optimism, kept on adding new models to the backend to the point where I just couldn't build my front-end fast enough to cope with all the functionality. In the end, the project would have been big enough to keep a team of 3 developers well busy. I decided not to worry about this too much though, and instead focused on finishing what I could with the time that I had.
