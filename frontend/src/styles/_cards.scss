@@ -1,0 +1,45 @@
+//? Cards
+
+.card-container {
+  display: inline-flex;
+  justify-content: center;
+  :hover {
+    background-color: #fffafa;
+  }
+}
+
+.card {
+  border: 2px $pink solid;
+  padding: 0 0 20px 0;
+  box-shadow: 0 0 10px $grey-light;
+  margin: 10px;
+  height: 400px;
+  width: 350px;
+  text-align: center;
+  overflow: scroll;
+
+
+  .card-img-wrapper {
+    height: 300px;
+  }
+
+  .card-info {
+    color: $grey-dark;
+    h4 {
+      text-align: center;
+      padding: 25px;
+    }
+  }
+
+  img {
+    max-height: 280px;
+    max-width: 280px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  p {
+    padding: 0 20px;
+    
+  }
+}

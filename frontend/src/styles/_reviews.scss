@@ -1,0 +1,22 @@
+//? Reviews
+
+.reviews {
+  display:flex;;
+}
+
+.reviews-latest {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.reviews-title {
+  margin: 40px;
+}
+
+.review-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}

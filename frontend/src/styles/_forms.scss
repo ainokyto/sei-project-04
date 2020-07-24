@@ -1,0 +1,35 @@
+.form-error {
+  color: red;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px $pink solid;
+  box-shadow: 0 0 10px $grey-light;
+  margin: 40px;
+  height: 50vh;
+  width: 40vw;
+  .selectbox {
+    margin: 10px;
+  }
+  label {
+    margin: 10px;
+    padding: 10px;
+  }
+  select {
+    margin: 10px;
+    padding: 5px;
+  }
+  textarea {
+    resize: none;
+    margin: 10px;
+    padding: 10px;
+    height: 15vh;
+    width: 30vw
+  }
+  button {
+    margin: 10px;
+  }
+}

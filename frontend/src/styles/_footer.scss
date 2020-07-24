@@ -1,0 +1,35 @@
+
+.footer {
+  position: relative;
+  left: 0; 
+  right: 0; 
+  height: 30vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: $grey-dark;
+  margin-top: 40px;
+
+  h2 {
+    font-family: 'Lexend Tera', sans-serif;
+    color: $pink;
+    margin: 40px;
+    align-self: center; 
+    &:hover {
+    color: $blue;
+  }
+}
+
+  ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  li {
+    color: $pink;
+    margin: 20px;
+    &:hover {
+      color: $blue
+    }
+  }
+}

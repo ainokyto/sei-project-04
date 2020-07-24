@@ -1,0 +1,51 @@
+//? MakerShow & WineShow
+
+.show-title {
+  margin: 50px;
+  h1 {
+    font-size: 40px;
+  }
+}
+
+.maker-header {
+  display: flex;
+  align-items: center;
+}
+
+.maker-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.show-info-container {
+  display: flex;
+  margin: 40px 80px 0 80px;
+  
+  p {
+    padding: 0 20px;
+  }
+  button {
+    margin: 20px;
+  }
+}
+
+.show-info {
+  padding: 40px;
+  margin-left: 20px;
+  border: 3px #efefef solid;
+}
+
+.img-wrapper {
+  border: 3px #efefef solid;
+  height: 80vh;
+  width: 60vw;
+  
+  img {
+    padding-top: 70px;
+    max-height: 60vh;
+    max-width: 40vw;
+    object-fit: contain;
+  } 
+}

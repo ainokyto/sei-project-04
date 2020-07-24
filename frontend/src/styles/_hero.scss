@@ -1,0 +1,19 @@
+.hero-main {
+  background-color: $pink;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 40vh;
+
+  h1 {
+    font-family: 'Lexend Tera', sans-serif;
+    font-size: 60px;
+    margin: 60px 20px; }
+    :hover {
+      color: $blue;
+  }
+
+  h3 {
+    margin: 0 20px 40px 0;
+  }
+}

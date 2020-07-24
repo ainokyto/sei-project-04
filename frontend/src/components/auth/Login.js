@@ -41,7 +41,7 @@ componentDidUpdate = prevProps => {
     return (
       <section >
         <div >
-          <div >
+          <div className="form-container">
             <form onSubmit={this.handleSubmit}>
               <div>
                 <label >email</label>
