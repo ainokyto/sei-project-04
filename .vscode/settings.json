@@ -1,5 +1,4 @@
 {
-  "python.pythonPath": "/usr/local/opt/python/bin/python3.7",
   "workbench.colorTheme": "Atom One Dark",
   "workbench.colorCustomizations": {
     "statusBar.background": "#90d9f5",
