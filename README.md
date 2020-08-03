@@ -147,3 +147,5 @@ Some added functionality I would have liked to add if I had more time:
 Going solo for the final project was definitely both a blessing and a curse, as it meant me miss out on some of the perks of collaborative work, such as bouncing ideas off team mates and sorting out any hurdles much sooner. On the flip side I'm happy that I decided to trust my ability to build a full-stack app on my own, as all the challenges I faced and was able to overcome in this project helped boost my confidence as a developer.
 
 A big learning experience for me had to do with managing my own workload. I'm afraid I was overly confident about the time and effort that goes into building a full-stack app, and in a state of uninformed optimism, kept on adding new models to the backend to the point where I just couldn't build my front-end fast enough to cope with all the functionality. In the end, the project would have been big enough to keep a team of 3 developers well busy. I decided not to worry about this too much though, and instead focused on finishing what I could with the time that I had.
+
+Pushing changes to Heroku.
