@@ -143,6 +143,7 @@ Some added functionality I would have liked to add if I had more time:
 * Search functionality with the ability to filter wines or producers by region, wine style etc.
 * Users could like their favourite wines
 * Maps to show geographical locations for different producers 
+* Responsive Design
 
 ## Key learnings
 

@@ -10,11 +10,9 @@
     "activityBar.inactiveForeground": "#15202b99",
     "activityBarBadge.background": "#af73eb",
     "activityBarBadge.foreground": "#15202b",
-    "statusBar.border": "#69e9a9",
     "statusBar.foreground": "#15202b",
     "statusBarItem.hoverBackground": "#3de28f",
     "titleBar.activeForeground": "#15202b",
-    "titleBar.border": "#69e9a9",
     "titleBar.inactiveForeground": "#15202b99"
   },
   "window.title": "WINO Front-End",
