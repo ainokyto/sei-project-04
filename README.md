@@ -1,12 +1,12 @@
 # WINO, a Python Django API and React app - GA Project Four
 
+### The app has been deployed with Heroku and is available [here](http://winoaino.herokuapp.com/).
+
 My final dev project for the Software Engineering Immersive course, a complex full-stack application built with Django REST Framework and React.
 
 WINO is a Yelp-style social review site aimed for natural wine lovers, where users can write and read reviews of natural wines and learn more about the producers behind their favourite bottles. 
 
 ![WINO mobile](./readme_assets/winomobile.gif)
-
-The app has been deployed with Heroku and is available [here](http://winoaino.herokuapp.com/).
 
 Please note that Heroku servers go to sleep after not receiving traffic for 1 hour, so the first request might take a moment as the servers wake up. Subsequent requests will perform normally.
 
