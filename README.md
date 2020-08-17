@@ -1,6 +1,6 @@
 # WINO, a Python Django API and React app - GA Project Four
 
-The app has been deployed with Heroku and is available [here](http://winoaino.herokuapp.com/).
+### The app has been deployed with Heroku and is available [here](http://winoaino.herokuapp.com/).
 
 My final dev project for the Software Engineering Immersive course, a complex full-stack application built with Django REST Framework and React.
 
