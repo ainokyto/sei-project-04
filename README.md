@@ -26,8 +26,7 @@ Please note that Heroku servers go to sleep after not receiving traffic for 1 ho
 
 * Django
 * Django REST Framework
-* Postgres
-* SQL
+* PostgreSQL
 * PyJWT
 * JavaScript (ES6)
 * React.js
@@ -86,7 +85,7 @@ After I was happy with my ERD, I started fleshing out the front-end by creating 
 #### Review wine
 ![WINO wireframe rewiex](./readme_assets/review.png)
 
-I started the development process by building my models, views and serialisers in Django REST Framwork to create a PostgreSQL database with RESTful features. I spent a good three days building these as I wanted to ascertain that everything was working as I expected. I used TablePlus to visualise my database, and Insomnia REST Client to test my backend requests, making sure all relationships between models were correct and that I was receiving the expected JSON responses. 
+I started the development process by building my models, views and serialisers in Django REST Framwork to create a SQL database with RESTful features. I spent a good three days building models as I wanted to ascertain that everything was working as I expected and the relationships I had planned were fit for purpose for the functionality I had designed. I used TablePlus to visualise my PostgreSQL database, and Insomnia REST Client to test my backend requests, making sure all relationships between models were correct and that I was receiving the expected JSON responses. 
 
 By the start of day four, I was happy with the backend to the point where I was ready to move on to my front-end. I quickly bootstrapped together the main components: Home, Register, Login, Index, View. I used Axios for the data requests from the back-end, creating an API request library that was imported onto each relevant page. I used react-router-dom for page navigation. 
 By this stage unfortunately, I became aware of rather a major flaw in my planning: I had taken on more than I could manage within the timeframe given. I had severely underestimated the time it would require to build the front-end for 6 models, and when the amount of my React components was skirting on 20, I had no choice but to choose my battles. I then decided to invest the time I had left to tying up loose ends, rather than trying to build new UI's for the functionality I had built in the backend.
