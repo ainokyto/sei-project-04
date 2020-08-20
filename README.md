@@ -41,11 +41,13 @@ Please note that Heroku servers go to sleep after not receiving traffic for 1 ho
 
 Click the Code button above to download the source code. In the terminal, enter the following commands:
 
+```
 <!— To install all the dependencies listed in the package.json: —> $ yarn 
 <!- Navigate into the shell -> $ pipenv shell
 <!— Run the app on localhost:8000 : —> $ python manage.py runserver
 <!— Check the console for any issues and if there are any then check the package.json for any dependencies missing —>
 <!- Navigate to http://localhost:8000/>
+```
 
 ## Demonstration of the App Flow
 
